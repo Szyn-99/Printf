@@ -1,28 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   declarations.h                                     :+:      :+:    :+:   */
+/*   specifier_s.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/22 18:52:09 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/11/27 13:15:00 by aymel-ha         ###   ########.fr       */
+/*   Created: 2025/11/27 12:05:07 by aymel-ha          #+#    #+#             */
+/*   Updated: 2025/11/27 12:05:08 by aymel-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DECLARATIONS_H
-#define DECLARATIONS_H
-#include <stdarg.h>
-#include <unistd.h>
+#include "declarations.h"
 
-int ft_printf(const char *str, ...);
-size_t specifier_c(char c);
-size_t specifier_d(int number);
-size_t specifier_s(char *s);
-size_t specifier_x(size_t n);
-size_t specifier_X(size_t n);
-size_t specifier_p(void *pointer);
-size_t specifier_i(long n);
-size_t specifier_u(unsigned int  n);
-
-#endif
+size_t specifier_s(char *s)
+{
+    size_t len = 0;
+    while(s[len])
+    {
+        len += specifier_c(s[len]);
+    }
+    return len;
+}

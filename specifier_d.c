@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   declarations.h                                     :+:      :+:    :+:   */
+/*   specifier_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/22 18:52:09 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/11/27 13:15:00 by aymel-ha         ###   ########.fr       */
+/*   Created: 2025/11/27 10:35:41 by aymel-ha          #+#    #+#             */
+/*   Updated: 2025/11/27 10:52:52 by aymel-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DECLARATIONS_H
-#define DECLARATIONS_H
-#include <stdarg.h>
-#include <unistd.h>
+#include "declarations.h"
 
-int ft_printf(const char *str, ...);
-size_t specifier_c(char c);
-size_t specifier_d(int number);
-size_t specifier_s(char *s);
-size_t specifier_x(size_t n);
-size_t specifier_X(size_t n);
-size_t specifier_p(void *pointer);
-size_t specifier_i(long n);
-size_t specifier_u(unsigned int  n);
-
-#endif
+size_t specifier_d(int number)
+{
+    
+    static size_t len = 0;
+    long n = number;
+    if(n < 0)
+    {
+        n = -n;
+        len += specifier_c('-');
+    }
+    if(n >= 10)
+    {
+        specifier_d(n / 10);
+    }
+    len += specifier_c((n%10)+'0');
+    return len;
+}
