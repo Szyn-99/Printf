@@ -6,7 +6,7 @@
 /*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 18:54:13 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/11/27 13:15:18 by aymel-ha         ###   ########.fr       */
+/*   Updated: 2025/11/27 13:20:42 by aymel-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,13 +49,14 @@ int ft_printf(const char *str, ...)
     {
         if(str[i] == '%' && specifiers_check(str[i+1]))
         {
-            count += operations(arguments, str[i]);
+            count += operations(arguments, str[i+1]);
+            i = i+2;
         }
         else
         {
             count += specifier_c(str[i]);
+            i++;
         }
-        i++;
     }
     return count;
 }

@@ -1,7 +1,7 @@
 CC = cc
 HEADER = delcarations.h
 FLAGS = -Wall -Wextra -Werror
-HELPERS = specifier_c.c specifier_d.c specifier_i.c specifier_p.c specifier_s.c specifier_s.c specifier_u.c specifier_x.c specifier_X.c
+HELPERS = printf.c specifier_c.c specifier_d.c specifier_i.c specifier_p.c specifier_s.c specifier_s.c specifier_u.c specifier_x.c specifier_X.c
 OBJECTS = $(HELPERS:.c=.o)
 NAME = libftprintf.a
 

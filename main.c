@@ -28,5 +28,7 @@
 int main ()
 {
     int a;
-    a = ft_printf()
+    a = ft_printf("%s\n", "1337");
+    printf("%d\n", a);
+    ft_printf("%d\n", a);
 }
