@@ -6,7 +6,7 @@
 /*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 18:54:13 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/11/27 13:26:08 by aymel-ha         ###   ########.fr       */
+/*   Updated: 2025/11/27 13:34:01 by aymel-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,5 +66,6 @@ int	ft_printf(const char *str, ...)
 			i++;
 		}
 	}
+	va_end(arguments);
 	return (count);
 }
