@@ -12,12 +12,15 @@
 
 #include "declarations.h"
 
-size_t specifier_x(size_t n)
+size_t	specifier_x(size_t n)
 {
-    size_t len = 0;
-    char *p = "0123456789abcdef";
-    if(n >= 16)
-        len += specifier_x(n/16);
-    len += specifier_c(p[n%16]);
-    return len;
+	size_t	len;
+	char	*p;
+
+	len = 0;
+	p = "0123456789abcdef";
+	if (n >= 16)
+		len += specifier_x(n / 16);
+	len += specifier_c(p[n % 16]);
+	return (len);
 }

@@ -8,7 +8,7 @@ NAME = libftprintf.a
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-	ar r $@ $^
+	ar rcs $@ $^
 %.o: %.c 
 	$(CC) $(FLAGS) -c $< -o $@
 

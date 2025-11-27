@@ -12,14 +12,16 @@
 
 #include "declarations.h"
 
-size_t specifier_s(char *s)
+size_t	specifier_s(char *s)
 {
-    size_t len = 0;
-    if(!s)
-        return specifier_s("NULL");
-    while(s[len])
-    {
-        len += specifier_c(s[len]);
-    }
-    return len;
+	size_t	len;
+
+	len = 0;
+	if (!s)
+		return (specifier_s("NULL"));
+	while (s[len])
+	{
+		len += specifier_c(s[len]);
+	}
+	return (len);
 }

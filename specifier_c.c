@@ -12,8 +12,8 @@
 
 #include "declarations.h"
 
-size_t specifier_c(char c)
+size_t	specifier_c(char c)
 {
-    write(1, &c, 1);
-    return 1;
+	write(1, &c, 1);
+	return (1);
 }

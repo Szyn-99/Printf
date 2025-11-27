@@ -12,17 +12,20 @@
 
 #include "declarations.h"
 
-size_t specifier_i(long n)
+size_t	specifier_i(long n)
 {
-    size_t len = 0;
-    char *p = "0123456789";
-    if(n < 0)
-    {
-        len += specifier_c('-');
-        n = -n;
-    }
-    if(n >= 10)
-        len += specifier_i(n/10);
-    len += specifier_c(p[n%10]);
-    return len;
+	size_t	len;
+	char	*p;
+
+	len = 0;
+	p = "0123456789";
+	if (n < 0)
+	{
+		len += specifier_c('-');
+		n = -n;
+	}
+	if (n >= 10)
+		len += specifier_i(n / 10);
+	len += specifier_c(p[n % 10]);
+	return (len);
 }

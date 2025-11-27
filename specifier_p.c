@@ -12,10 +12,12 @@
 
 #include "declarations.h"
 
-size_t specifier_p(void *pointer)
+size_t	specifier_p(void *pointer)
 {
-    size_t len = 0;
-    len += specifier_s("0x");
-    len += specifier_x((size_t)pointer);
-    return len;
+	size_t	len;
+
+	len = 0;
+	len += specifier_s("0x");
+	len += specifier_x((size_t)pointer);
+	return (len);
 }
