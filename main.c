@@ -1,10 +1,12 @@
 #include "declarations.h"
 #include <stdio.h>
 
-int main()
+int	main(void)
 {
-    char *s = NULL;
-    printf("Pointer: %p\n", s);
-    ft_printf("Pointer: %p\n", s);
-    return 0;
+	char	*s;
+
+	s = NULL;
+	printf("Pointer: %p\n", s);
+	ft_printf("Pointer: %p\n", s);
+	return (0);
 }
