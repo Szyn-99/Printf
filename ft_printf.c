@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   printf.c                                           :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: szyn <szyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 18:54:13 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/11/30 19:05:01 by szyn             ###   ########.fr       */
+/*   Updated: 2025/11/30 20:08:06 by szyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,10 @@ static size_t	operations(va_list list, char c)
 	len = 0;
 	if (c == 'c')
 		len += specifier_c(va_arg(list, int));
-	else if (c == 'i' || c == 'd')
+	else if (c == 'i')
 		len += specifier_i(va_arg(list, int));
+	else if (c == 'd')
+		len += specifier_d(va_arg(list, int));
 	else if (c == 'p')
 		len += specifier_p(va_arg(list, void *));
 	else if (c == 's')

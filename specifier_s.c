@@ -19,8 +19,8 @@ size_t	specifier_s(char *s)
 	len = 0;
 	if (!s)
 	{
-		write(1, "(null)", 6);
-		return (6);
+		write(1, "(nil)", 5);
+		return (5);
 	}
 	while (s[len])
 	{

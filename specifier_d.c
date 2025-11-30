@@ -6,7 +6,7 @@
 /*   By: szyn <szyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 10:35:41 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/11/30 19:07:27 by szyn             ###   ########.fr       */
+/*   Updated: 2025/11/30 20:02:23 by szyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 size_t	specifier_d(int number)
 {
-	size_t	len = 0;
-	long			n;
+	size_t	len;
+	long	n;
 
+	len = 0;
 	n = number;
 	if (n < 0)
 	{
