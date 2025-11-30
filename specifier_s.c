@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   specifier_s.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: szyn <szyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:05:07 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/11/27 13:17:48 by aymel-ha         ###   ########.fr       */
+/*   Updated: 2025/11/30 19:11:08 by szyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,14 @@ size_t	specifier_s(char *s)
 
 	len = 0;
 	if (!s)
-		return (specifier_s("NULL"));
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
 	while (s[len])
 	{
-		len += specifier_c(s[len]);
+		specifier_c(s[len]);
+		len++;
 	}
 	return (len);
 }

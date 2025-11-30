@@ -1,5 +1,5 @@
 CC = cc
-HEADER = delcarations.h
+HEADER = declarations.h
 FLAGS = -Wall -Wextra -Werror
 HELPERS = printf.c specifier_c.c specifier_d.c specifier_i.c specifier_p.c specifier_s.c specifier_s.c specifier_u.c specifier_x.c specifier_X.c
 OBJECTS = $(HELPERS:.c=.o)
@@ -9,7 +9,7 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS)
 	ar rcs $@ $^
-%.o: %.c 
+%.o: %.c $(HEADER)
 	$(CC) $(FLAGS) -c $< -o $@
 
 clean:

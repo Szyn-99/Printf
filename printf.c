@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   printf.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: szyn <szyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 18:54:13 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/11/27 13:34:01 by aymel-ha         ###   ########.fr       */
+/*   Updated: 2025/11/30 19:05:01 by szyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,11 +60,10 @@ int	ft_printf(const char *str, ...)
 			count += operations(arguments, str[i + 1]);
 			i = i + 2;
 		}
+		else if (str[i] == '%')
+			return (-1);
 		else
-		{
-			count += specifier_c(str[i]);
-			i++;
-		}
+			count += specifier_c(str[i++]);
 	}
 	va_end(arguments);
 	return (count);

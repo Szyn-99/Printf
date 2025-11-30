@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   specifier_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: szyn <szyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 10:35:41 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/11/27 10:52:52 by aymel-ha         ###   ########.fr       */
+/*   Updated: 2025/11/30 19:07:27 by szyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	specifier_d(int number)
 {
-	static size_t	len = 0;
+	size_t	len = 0;
 	long			n;
 
 	n = number;
@@ -25,7 +25,7 @@ size_t	specifier_d(int number)
 	}
 	if (n >= 10)
 	{
-		specifier_d(n / 10);
+		len += specifier_d(n / 10);
 	}
 	len += specifier_c((n % 10) + '0');
 	return (len);

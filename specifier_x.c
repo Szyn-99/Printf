@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   specifier_x.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
+/*   By: szyn <szyn@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:04:02 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/11/27 12:04:03 by aymel-ha         ###   ########.fr       */
+/*   Updated: 2025/11/30 18:56:44 by szyn             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "declarations.h"
 
-size_t	specifier_x(size_t n)
+size_t	specifier_x(unsigned int n)
 {
 	size_t	len;
 	char	*p;
