@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: szyn <szyn@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 18:54:13 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/11/30 20:08:06 by szyn             ###   ########.fr       */
+/*   Updated: 2025/12/02 19:39:13 by aymel-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	ft_printf(const char *str, ...)
 			count += operations(arguments, str[i + 1]);
 			i = i + 2;
 		}
-		else if (str[i] == '%')
+		else if (str[i] == '%' && !str[i + 1])
 			return (-1);
 		else
 			count += specifier_c(str[i++]);
