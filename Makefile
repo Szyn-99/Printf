@@ -6,7 +6,7 @@ OBJECTS = $(HELPERS:.c=.o)
 NAME = libftprintf.a
 
 all: $(NAME)
-
+ 
 $(NAME): $(OBJECTS)
 	ar rcs $@ $^
 %.o: %.c $(HEADER)

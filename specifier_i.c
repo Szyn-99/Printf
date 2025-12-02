@@ -6,13 +6,13 @@
 /*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:18:54 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/11/27 12:27:56 by aymel-ha         ###   ########.fr       */
+/*   Updated: 2025/12/02 20:03:21 by aymel-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "declarations.h"
 
-size_t	specifier_i(long n)
+size_t	specifier_i(int n)
 {
 	size_t	len;
 	char	*p;
