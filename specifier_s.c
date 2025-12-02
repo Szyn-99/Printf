@@ -6,7 +6,7 @@
 /*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:05:07 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/12/02 19:55:57 by aymel-ha         ###   ########.fr       */
+/*   Updated: 2025/12/02 21:41:39 by aymel-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ size_t	specifier_s(char *s)
 	len = 0;
 	if (!s)
 	{
-		write(1, "(nil)", 5);
+		write(1, "(null)", 5);
 		return (5);
 	}
 	while (s[len])
