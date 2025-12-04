@@ -6,7 +6,7 @@
 /*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/22 18:54:13 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/12/02 19:56:11 by aymel-ha         ###   ########.fr       */
+/*   Updated: 2025/12/04 18:08:20 by aymel-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	ft_printf(const char *str, ...)
 	va_start(arguments, str);
 	i = 0;
 	count = 0;
-	if (!str)
+	if (!str || write(1, "", 0) < 0)
 		return (-1);
 	while (str[i] != '\0')
 	{
