@@ -6,7 +6,7 @@
 /*   By: aymel-ha <aymel-ha@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/27 12:18:54 by aymel-ha          #+#    #+#             */
-/*   Updated: 2025/12/04 18:08:04 by aymel-ha         ###   ########.fr       */
+/*   Updated: 2025/12/05 16:06:28 by aymel-ha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 size_t	specifier_i(int number)
 {
 	size_t	len;
-	char	*p;
 	long	n;
+	char	*p;
 
 	n = number;
 	len = 0;
